@@ -1,0 +1,78 @@
+﻿@model cottage_crafts.Models.ViewModel.SignUpViewModel
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>SignUp Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="~/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/css/style2.css">
+
+</head>
+<body>
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <h5 style="color:red;">@TempData["errorMessage"]</h5>
+                        <form method="POST" asp-action="SignUp" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <!-- <label asp-for="Username"></label>-->
+                                <input type="text" asp-for="Username" id="Username" placeholder="Enter your UserName" autocomplete="off" />
+                                <span asp-validation-for="Username" style="color:red;"></span>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label asp-for="Email"></label>-->
+                                <input type="text" asp-for="Email" id="Email" placeholder="Enter your Email Address" autocomplete="off" />
+                                <span asp-validation-for="Email" style="color:red;"></span>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label asp-for="Mobile_no"></label>-->
+                                <input type="number" asp-for="Mobile_no" id="Mobile_no" placeholder="Enter your Mobile Number" autocomplete="off" />
+                                <span asp-validation-for="Mobile_no" style="color:red;"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" asp-for="Password" id="Password" placeholder="Enter your Password" autocomplete="off" />
+                                <span asp-validation-for="Password" style="color:red;"></span>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label asp-for="ConfirmPassword"></label>-->
+                                <input type="password" asp-for="ConfirmPassword" id="ConfirmPassword" placeholder="Repeat your password" autocomplete="off" />
+                                <span asp-validation-for="ConfirmPassword" style="color:red;"></span>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="~/images/signup-image.jpg" alt="sing up image"></figure>
+                        <a asp-action="Login" asp-controller="Account" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JS -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+</html>

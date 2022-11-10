@@ -1,0 +1,52 @@
+﻿@model cottage_crafts.Models.Crafts
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Crafts</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="cid" />
+            <div class="form-group">
+                <label asp-for="cname" class="control-label"></label>
+                <input asp-for="cname" class="form-control" />
+                <span asp-validation-for="cname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cprice" class="control-label"></label>
+                <input asp-for="cprice" class="form-control" />
+                <span asp-validation-for="cprice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cdesc" class="control-label"></label>
+                <input asp-for="cdesc" class="form-control" />
+                <span asp-validation-for="cdesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cimg" class="control-label"></label>
+                <input asp-for="cimg" class="form-control" />
+                <span asp-validation-for="cimg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ccategory" class="control-label"></label>
+                <input asp-for="ccategory" class="form-control" />
+                <span asp-validation-for="ccategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

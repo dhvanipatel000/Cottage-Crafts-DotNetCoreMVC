@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<html>
+    <head></head>
+    <body>
+<h2>Enter your Delivery Address</h2>
+<h5>~Currently because of some issues , Online Payment is not available , so Cash On Delivery is accepted</h5>
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <input type="text" id="hno" placeholder="Enter your House Number:" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="sname" placeholder="Enter name of the Society:" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="city" placeholder="Enter City:" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="state" placeholder="Enter State:" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="country" placeholder="Enter Country:" autocomplete="off" />
+            </div>
+        </form>
+            <button onclick="msg()">Confirm Order</button>
+    </div>
+</div>
+    <script>
+        function msg() {
+            alert("The product will be delivered at your address , Thank you for placing the order!!");
+        }
+    </script>
+        </body>
+        </html>
+
+
